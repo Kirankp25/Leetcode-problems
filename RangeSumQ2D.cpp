@@ -34,18 +34,24 @@ n == matrix[i].length
 0 <= col1 <= col2 < n
 At most 104 calls will be made to sumRegion.
 */
-class NumMatrix {
+class NumMatrix 
+{
 public:
-    vector<vector<int>> mat;
-    NumMatrix(vector<vector<int>>& matrix) {
-        mat = matrix;
+    vector<vector<int>> m;
+    NumMatrix(vector<vector<int>>& matrix) 
+    {
+        m = matrix;
     }
     
-    int sumRegion(int row1, int col1, int row2, int col2) {
+    int sumRegion(int row1, int col1, int row2, int col2) 
+    {
+
         int sum = 0;
-        for(int i = row1 ; i <= row2; i++){
-            for(int j = col1 ; j <= col2; j++){
-                sum += mat[i][j];
+        for(int i = row1 ;i <= row2 ;i++)
+        {
+            for(int j = col1 ; j <= col2; j++)
+            {
+                sum += m[i][j];
             }
         }
         return sum;
